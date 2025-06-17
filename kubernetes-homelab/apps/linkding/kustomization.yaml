@@ -1,2 +1,3 @@
 resources:
   - deploy.yaml
+  - tailscale-proxy.yaml
