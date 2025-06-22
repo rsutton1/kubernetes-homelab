@@ -1,3 +1,4 @@
 namespace: cnpg-system
 resources:
   - helm-repository.yaml
+  - helm-release.yaml
