@@ -1,3 +1,10 @@
 resources:
   - helm-repository-cnpg.yaml
   - helm-repository.yaml
+  - helm-release.yaml
+configMapGenerator:
+  - name: immich-values
+    files:
+      - values.yaml
+configurations:
+  - kustomizeconfig.yaml
