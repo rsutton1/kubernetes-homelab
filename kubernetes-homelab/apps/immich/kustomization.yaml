@@ -1,2 +1,3 @@
 resources:
+  - helm-repository-cnpg.yaml
   - helm-repository.yaml
