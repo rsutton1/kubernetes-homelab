@@ -1,6 +1,5 @@
 namespace: immich
 resources:
-  - helm-repository-cnpg.yaml
   - pg.yaml
   - pv.yaml
   - helm-repository.yaml
