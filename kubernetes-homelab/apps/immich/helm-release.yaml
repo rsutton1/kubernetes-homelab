@@ -7,8 +7,8 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: immich-0.9.3
-      version: 'v1.119.0'
+      chart: immich
+      version: '0.9.3'
       sourceRef:
         kind: HelmRepository
         name: immich
