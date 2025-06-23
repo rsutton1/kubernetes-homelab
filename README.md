@@ -1,4 +1,6 @@
-This repo stores the configuration for my homelab. I'm currently running the following services:
+This repo stores the Kubernetes YAML files for my homelab.
+
+I'm currently running the following services:
 
  - [FluxCD](https://fluxcd.io/) for GitOps
  - [Tailscale](https://tailscale.com/) for the network layer
