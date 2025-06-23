@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: immich-nodeport
+  name: immich-nodeport
+  namespace: immich
+spec:
+  ports:
+  - name: 2283-2283
+    port: 2283
+    protocol: TCP
+    targetPort: 2283
+    nodePort: 32610
+  selector:
+    app.kubernetes.io/instance: immich
+    app.kubernetes.io/name: server
+  type: NodePort
+status:
+  loadBalancer: {}
