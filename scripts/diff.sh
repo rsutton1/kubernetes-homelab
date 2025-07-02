@@ -1,1 +1,1 @@
-flux diff kustomization linkding --namespace=flux-system --path=./kubernetes-homelab/apps/
+flux diff kustomization dev --namespace=flux-system --path=./kubernetes-homelab
