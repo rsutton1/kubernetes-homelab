@@ -36,7 +36,7 @@ spec:
     - name: TS_DEBUG_FIREWALL_MODE
       value: auto
     - name: TS_DEST_IP
-      value: "10.43.9.153"
+      value: "100.97.180.14"
     - name: TS_AUTH_ONCE
       value: "true"
     - name: POD_NAME
