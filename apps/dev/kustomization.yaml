@@ -1,0 +1,4 @@
+resources:
+  - ../base/cnpg
+  - ../base/immich
+  - ../base/linkding
