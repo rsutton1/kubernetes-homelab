@@ -55,3 +55,4 @@ patches:
         postgresql:
           parameters:
             huge_pages: "off"
+            full_page_writes: "off"
