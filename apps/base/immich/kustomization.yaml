@@ -4,6 +4,7 @@ resources:
   - pg.yaml
   - helm-repository.yaml
   - helm-release.yaml
+  - immich-nodeport.yaml
 configMapGenerator:
   - name: immich-values
     files:
