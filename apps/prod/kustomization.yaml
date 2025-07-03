@@ -1,0 +1,26 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../base/linkding
+
+patches:
+  - patch: |-
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        name: ts-linkding
+      spec:
+        containers:
+        - name: tailscale
+          env:
+          - name: TS_DEST_IP
+            value: "10.43.209.1"
+    target:
+      kind: Pod
+      name: ts-linkding
+  - patch: |-
+      $patch: delete
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        name: ts-linkding
