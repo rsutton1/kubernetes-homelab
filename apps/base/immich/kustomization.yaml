@@ -1,7 +1,7 @@
 namespace: immich
 resources:
-  - pg.yaml
   - pv.yaml
+  - pg.yaml
   - helm-repository.yaml
   - helm-release.yaml
 configMapGenerator:
