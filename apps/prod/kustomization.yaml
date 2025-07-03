@@ -53,6 +53,5 @@ patches:
         namespace: immich
       spec:
         postgresql:
-          huge_pages: "off"
-          shared_preload_libraries:
-            - "vectors.so"
+          parameters:
+            huge_pages: "off"
