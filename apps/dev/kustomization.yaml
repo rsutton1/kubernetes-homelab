@@ -4,3 +4,19 @@ resources:
   - ../base/cnpg
   - ../base/immich
   - ../base/linkding
+
+patches:
+  - patch: |-
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        name: ts-linkding
+      spec:
+        containers:
+        - name: tailscale
+          env:
+          - name: TS_DEST_IP
+            value: "10.43.209.1"
+    target:
+      kind: Pod
+      name: ts-linkding

@@ -7,29 +7,10 @@ resources:
 
 patches:
   - patch: |-
-      apiVersion: v1
-      kind: Pod
-      metadata:
-        name: ts-linkding
-      spec:
-        containers:
-        - name: tailscale
-          env:
-          - name: TS_DEST_IP
-            value: "10.43.209.1"
-    options:
-      allowNameChange: true
-    target:
-      kind: Pod
-      name: proxy
-  - patch: |-
       [
-        {"op": "add",
-         "path": "/metadata/namespace",
-         "value": "default"},
         {"op": "replace",
-         "path": "/spec/containers/0/name",
-         "value": "linkding"}
+         "path": "/metadata/name",
+         "value": "ts-linkding"}
       ]
     target:
       kind: Pod
