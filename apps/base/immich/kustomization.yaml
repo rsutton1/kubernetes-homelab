@@ -5,9 +5,23 @@ resources:
   - helm-repository.yaml
   - helm-release.yaml
   - immich-nodeport.yaml
+  - ../tailscale-rbac
+  - ../tailscale-proxy
+
 configMapGenerator:
   - name: immich-values
     files:
       - values.yaml
 configurations:
   - kustomizeconfig.yaml
+
+patches:
+  - patch: |-
+      [
+        {"op": "replace",
+         "path": "/metadata/name",
+         "value": "ts-immich"}
+      ]
+    target:
+      kind: Pod
+      name: proxy

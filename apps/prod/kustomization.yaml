@@ -22,6 +22,20 @@ patches:
       name: ts-linkding
   - patch: |-
       apiVersion: v1
+      kind: Pod
+      metadata:
+        name: ts-immich
+      spec:
+        containers:
+        - name: tailscale
+          env:
+          - name: TS_DEST_IP
+            value: "10.43.97.177"
+    target:
+      kind: Pod
+      name: ts-immich
+  - patch: |-
+      apiVersion: v1
       kind: PersistentVolume
       metadata:
         name: immich-ml-pv

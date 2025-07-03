@@ -22,3 +22,9 @@ patches:
     target:
       kind: Pod
       name: ts-linkding
+  - patch: |-
+      $patch: delete
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        name: ts-immich
