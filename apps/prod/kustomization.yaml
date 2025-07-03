@@ -45,14 +45,3 @@ patches:
       metadata:
         name: immich
         namespace: immich
-  - patch: |-
-      apiVersion: postgresql.cnpg.io/v1
-      kind: Cluster
-      metadata:
-        name: immich-postgres
-        namespace: immich
-      spec:
-        postgresql:
-          parameters:
-            huge_pages: "off"
-            full_page_writes: "off"
