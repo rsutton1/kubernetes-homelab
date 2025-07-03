@@ -1,4 +1,6 @@
+namespace: default
 resources:
   - deploy.yaml
   - service.yaml
+  - ../tailscale-proxy
   - tailscale-proxy.yaml
