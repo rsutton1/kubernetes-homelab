@@ -45,11 +45,3 @@ patches:
       metadata:
         name: immich
         namespace: immich
-  - patch: |-
-      apiVersion: postgresql.cnpg.io/v1
-      kind: Cluster
-      metadata:
-        name: immich-postgres
-        namespace: immich
-      spec:
-        imageName: tensorchord/cloudnative-pgvecto-rs:16-v0.4.0
