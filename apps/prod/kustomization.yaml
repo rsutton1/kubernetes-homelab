@@ -38,10 +38,3 @@ patches:
           storage: 1000Gi
         hostPath:
           path: "/mnt/ssd/apps/immich/library-pv"
-  - patch: |-
-      $patch: delete
-      apiVersion: helm.toolkit.fluxcd.io/v2
-      kind: HelmRelease
-      metadata:
-        name: immich
-        namespace: immich
