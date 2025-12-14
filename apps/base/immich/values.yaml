@@ -22,7 +22,7 @@ env:
     value: '{{ printf "http://%s-machine-learning:3003" .Release.Name }}'
  
 image:
-  tag: v1.142.0
+  tag: v2.3.1
  
 immich:
   metrics:
